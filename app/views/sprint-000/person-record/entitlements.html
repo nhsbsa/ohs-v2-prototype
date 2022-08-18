@@ -1,0 +1,288 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<style>
+
+  .column-section-heading {
+    font-size: 1.375rem;
+  }
+  .column-section-change {
+    font-size: 1.1875rem;
+    font-weight: 300;
+  }
+  .grey {
+    color: #4c6272
+;
+  }
+  
+
+</style>
+
+<nav class="nhsuk-breadcrumb nhsBSA-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container-fluid">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item">
+            <a class="nhsuk-breadcrumb__link" href="search">Search</a>
+          </li>
+          <li class="nhsuk-breadcrumb__item">
+            <a class="nhsuk-breadcrumb__link" href="search-results">Search results</a>
+          </li>
+          <li class="nhsuk-breadcrumb__item">Michael Philip</li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="search-results">Back to search results</a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <h1 class="nhsuk-heading-xl">Michael Philip
+                <span class="nhsuk-heading-l grey">
+                 OHS reference number: 25000002
+               </span>
+             </h1>
+              <!-- <hr style="border-bottom: 4px solid #005eb8; margin: 0" /> -->
+              
+            </div>
+          </div>
+
+
+          <div class="nhsuk-scrollable-pane">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+
+                <table role="table" class="nhsuk-table-responsive">
+                  <!-- <caption class="nhsuk-table__caption">Ibuprofen tablet dosages for children</caption> -->
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">
+                        Entitlement type
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Start date
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        End date
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Main/Dependant
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Country
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        Status
+                      </th>
+                      <th role="columnheader" class="" scope="col">
+                        View more
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Entitlement type </span>S1
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>04/12/2018
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>-
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Main/Dependant </span>Main
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Country </span>France
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>Registered
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">View more </span>[icon]
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Entitlement type </span>GHIC
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>01/08/2021
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>01/08/2025
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Main/Dependant </span>Main
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Country </span>-
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                        <strong class="nhsuk-tag nhsuk-tag--green">
+                          Issued
+                        </strong>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">View more </span>[icon]
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Entitlement type </span>E109
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>04/12/2018
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>-
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Main/Dependant </span>Main
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Country </span>France
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Status </span>
+                         <strong class="nhsuk-tag nhsuk-tag--red">
+                          Rejected
+                        </strong>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">View more </span>[icon]
+                        <span class="nhsuk-details__summary-text::before"></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                
+
+
+
+
+
+
+<!-- 
+                <table class="nhsuk-table">
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="column-section-heading" scope="col">
+                        Personal details
+                      </th>
+                      <th role="columnheader" class="column-section-change" scope="col">
+                        <a href="#" style="float: right;">Change<span class="nhsuk-u-visually-hidden"> personal details</span>
+                      </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">Full name</td>
+                      <td class="nhsuk-table__cell ">Michael Philip</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">Surname at birth</td>
+                      <td class="nhsuk-table__cell ">-</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">Date of birth</td>
+                      <td class="nhsuk-table__cell ">15 March 1984</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                      <td class="nhsuk-table__cell">National Insurance number</td>
+                      <td class="nhsuk-table__cell ">SR123456A</td>
+                    </tr>
+                  </tbody>
+                </table> -->
+
+
+
+
+
+
+
+
+
+              </div>
+            </div>
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--start left navigation-->
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <!-- <h3>
+          Michael Philip<span class="nhsuk-caption-m nhsuk-caption--bottom">
+            <span class="nhsuk-u-visually-hidden"> - </span>250001234</span>
+        </h3> -->
+        <ul>
+          <div id="options" class="options">
+            <li>
+              <a href="case-record">Personal details</a>
+            </li>
+            <li></li>
+            <li>
+              <a class="active" href="entitlements">Entitlements</a>
+            </li>
+            <li>
+              <a href="case-history">Case history</a>
+            </li>
+            <li>
+              <a href="case-notes">Case notes</a>
+            </li>
+            <li>
+              <a href="documents">Documents</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+<!--end left navigation-->
+  </div>
+</div>
+
+{% endblock %}
